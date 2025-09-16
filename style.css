@@ -1,0 +1,113 @@
+/* General Styling */
+:root {
+    --bg-color: #1a1a2e;
+    --card-bg: #22223b;
+    --text-color: #f0e6ef;
+    --accent-color: #9a8c98;
+    --button-color: #5d4a66;
+    --button-hover-color: #7b6883;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    direction: rtl; /* For right-to-left language support */
+}
+
+/* Login Container */
+.login-container {
+    background-color: var(--card-bg);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+.login-form h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #33334b;
+    border: 1px solid #44445c;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: #44445c;
+}
+
+/* Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+
+/* Link */
+.forgot-password {
+    display: block;
+    margin-top: 1.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--text-color);
+}
